@@ -99,6 +99,7 @@ public class InputManager : MonoBehaviour {
 				joints [j].anchor = nail.transform.InverseTransformPoint (mousePosition);
 				joints [j].connectedAnchor = pieces [j].transform.InverseTransformPoint (mousePosition);
 				joints [j].enableCollision = false;
+				joints [j].breakForce = 500;
 			}
 				
 		} else {

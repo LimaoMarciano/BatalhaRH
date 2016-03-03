@@ -2,9 +2,9 @@ Mono path[0] = 'F:/Repositorios/BatalhaRH/BatalhaRH/Bin/v0.1.0/batalhaRh_Data/Ma
 Mono path[1] = 'F:/Repositorios/BatalhaRH/BatalhaRH/Bin/v0.1.0/batalhaRh_Data/Mono'
 Mono config path = 'F:/Repositorios/BatalhaRH/BatalhaRH/Bin/v0.1.0/batalhaRh_Data/Mono/etc'
 PlayerConnection initialized from F:/Repositorios/BatalhaRH/BatalhaRH/Bin/v0.1.0/batalhaRh_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55343
-Multi-casting "[IP] 192.168.0.103 [Port] 55343 [Flags] 2 [Guid] 2327662482 [EditorId] 2582511850 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-F9A8ST3) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.0.103:55343]
+PlayerConnection initialized network socket : 0.0.0.0 55152
+Multi-casting "[IP] 192.168.0.103 [Port] 55152 [Flags] 2 [Guid] 70203780 [EditorId] 2582511850 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-F9A8ST3) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.103:55152]
 Initialize engine version: 5.3.1f1 (cc9cbbcc37b4)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -21,14 +21,14 @@ Platform assembly: F:\Repositorios\BatalhaRH\BatalhaRH\Bin\v0.1.0\batalhaRh_Data
 Loading F:\Repositorios\BatalhaRH\BatalhaRH\Bin\v0.1.0\batalhaRh_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: F:\Repositorios\BatalhaRH\BatalhaRH\Bin\v0.1.0\batalhaRh_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading F:\Repositorios\BatalhaRH\BatalhaRH\Bin\v0.1.0\batalhaRh_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.091 seconds
+- Completed reload, in  0.036 seconds
 Platform assembly: F:\Repositorios\BatalhaRH\BatalhaRH\Bin\v0.1.0\batalhaRh_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\Repositorios\BatalhaRH\BatalhaRH\Bin\v0.1.0\batalhaRh_Data\Managed\System.dll (this message is harmless)
 desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.668079 ms
+UnloadTime: 0.531547 ms
 Piece box released a piece. Remaining: 9
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -68,66 +68,6 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/PieceBox.cs Line: 40)
 
-Grabbed piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
-Grabbed piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
-Grabbed piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
 Piece box released a piece. Remaining: 6
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -140,6 +80,26 @@ UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\b
 UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
  
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/PieceBox.cs Line: 40)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
 
 Piece box released a piece. Remaining: 5
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -179,26 +139,6 @@ UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\b
 UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
  
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/PieceBox.cs Line: 40)
-
-Grabbed piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
 
 Piece box released a piece. Remaining: 2
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -285,106 +225,6 @@ InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\Inp
  
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
 
-Grabbed piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Metal(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
-Grabbed piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
-Grabbed piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
-Grabbed piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
-Grabbed piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
-
-Released piece Wood(Clone)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
-
 Grabbed piece Wood(Clone)
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -424,8 +264,188 @@ InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scrip
 InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
  
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Grabbed piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:HoldPiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:56)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:32)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 56)
+
+Released piece Metal(Clone)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:ReleasePiece() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:68)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:30)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 68)
+
+Binding 3 pieces together.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
+
+Binding 3 pieces together.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
+
+Binding 3 pieces together.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
+
+Binding 3 pieces together.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
+
+Binding 2 pieces together.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
 
 Binding 4 pieces together.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
+InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
+ 
+(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
+
+Binding 3 pieces together.
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -455,27 +475,7 @@ InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\Inp
  
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
 
-Binding 4 pieces together.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
-
-Binding 3 pieces together.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-InputManager:BindPieces() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:88)
-InputManager:Update() (at F:\Repositorios\BatalhaRH\BatalhaRH\Assets\Scripts\InputManager.cs:44)
- 
-(Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/InputManager.cs Line: 88)
-
-Activating physics. Found 15 pieces
+Activating physics. Found 19 pieces
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -498,4 +498,4 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: F:/Repositorios/BatalhaRH/BatalhaRH/Assets/Scripts/ProtoUI.cs Line: 22)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1f04 -> priority: 1 
+  Thread -> id: 2d48 -> priority: 1 
