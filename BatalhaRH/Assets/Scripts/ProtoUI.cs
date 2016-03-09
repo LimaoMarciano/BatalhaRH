@@ -23,5 +23,8 @@ public class ProtoUI : MonoBehaviour {
 		foreach (Rigidbody2D rb in rbs) {
 			rb.isKinematic = false;
 		}
+
+		GameObject player = GameObject.Find ("Player");
+		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 	}
 }
