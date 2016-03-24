@@ -27,23 +27,27 @@ public class Cannon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		hInput = Input.GetAxis ("Horizontal2");
-		vInput = Input.GetAxis ("Vertical2");
+		if (GameManager.instance.gameState == GameState.Battle) {
+			hInput = Input.GetAxis ("P1HorizontalAim");
+			vInput = Input.GetAxis ("P1VerticalAim");
 
-		Aim ();
+			Aim ();
 
-		if (isReady) {
-			if (Input.GetButtonDown ("Fire1")) {
-				isFireBtnDown = true;
-				isReady = false;
-			}
-		} else {
-			timer += Time.deltaTime;
-			if (timer >= cooldown) {
-				isReady = true;
-				timer = 0;
+			if (isReady) {
+				if (Input.GetButtonDown ("P1Fire")) {
+					isFireBtnDown = true;
+					isReady = false;
+				}
+			} else {
+				timer += Time.deltaTime;
+				if (timer >= cooldown) {
+					isReady = true;
+					timer = 0;
+				}
 			}
 		}
+
+
 
 	}
 

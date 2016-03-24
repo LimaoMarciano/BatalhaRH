@@ -19,8 +19,8 @@ public class Rocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		hInput = Input.GetAxis ("Horizontal");
-		vInput = Input.GetAxis ("Vertical");
+		hInput = Input.GetAxis ("P1HorizontalMove");
+		vInput = Input.GetAxis ("P1VerticalMove");
 	}
 
 	void FixedUpdate () {

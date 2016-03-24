@@ -18,6 +18,8 @@ public class ProtoUI : MonoBehaviour {
 	}
 
 	public void ActivatePhysics () {
+		GameManager.instance.gameState = GameState.Battle;
+
 		Rigidbody2D[] rbs = vehicle.transform.GetComponentsInChildren<Rigidbody2D> ();
 		Debug.Log ("Activating physics. Found " + rbs.Length + " pieces");
 		foreach (Rigidbody2D rb in rbs) {
