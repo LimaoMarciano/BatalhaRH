@@ -5,6 +5,8 @@ public class CursorBehaviour : MonoBehaviour {
 
 	public float cursorSpeed = 1;
 
+	public LayerMask interactibleLayers;
+
 	private float hInput;
 	private float vInput;
 
@@ -12,7 +14,7 @@ public class CursorBehaviour : MonoBehaviour {
 	private string VerticalMove;
 	private string HorizontalAim;
 	private string VerticalAim;
-	private string Grab;
+	private string Action;
 	private string Fire;
 
 
@@ -22,14 +24,7 @@ public class CursorBehaviour : MonoBehaviour {
 	private Vector2 holdInitialPos;
 	private Vector2 pieceInitialPos;
 
-	public enum Player {
-		Player1,
-		Player2,
-		Player3,
-		Player4
-	};
-
-	public Player player;
+	public PlayerNum playerNum;
 
 	// Use this for initialization
 	void Start () {
@@ -38,20 +33,28 @@ public class CursorBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Collider2D targetCollider;
+
 		cursorPosition = transform.position;
 
 		hInput = Input.GetAxis (HorizontalMove);
 		vInput = Input.GetAxis (VerticalMove);
 
 		if (GameManager.instance.gameState == GameState.SelectPieces) {
-			if (Input.GetButtonDown (Grab)) {
+
+			if (Input.GetButtonDown (Action)) {
+
 				if (isHoldingPiece) {
 					ReleasePiece ();
 				} else {
-					HoldPiece ();
+					targetCollider = GameManager.instance.ActionEvent (this, cursorPosition);
+					
+					if (targetCollider) {
+						HoldPiece (targetCollider);
+					}
 				}
 			}
-
+				
 			if (isHoldingPiece) {
 //			float mouseWheelInput = Input.GetAxis ("Mouse ScrollWheel");
 //			RotatePiece (mouseWheelInput);
@@ -72,8 +75,8 @@ public class CursorBehaviour : MonoBehaviour {
 		transform.Translate (input * cursorSpeed * Time.fixedDeltaTime);
 	}
 
-	void HoldPiece () {
-		targetPiece = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Pieces"));
+	void HoldPiece (Collider2D collider) {
+		targetPiece = collider;
 		//		holdOffsetPos = targetPiece.transform.InverseTransformPoint(mousePosition);
 		if (targetPiece) {
 			isHoldingPiece = true;
@@ -113,16 +116,16 @@ public class CursorBehaviour : MonoBehaviour {
 //			break;
 //		}
 
-		if (player == Player.Player1) {
+		if (playerNum == PlayerNum.Player1) {
 			playerPrefix = "P1";
 		}
-		if (player == Player.Player2) {
+		if (playerNum == PlayerNum.Player2) {
 			playerPrefix = "P2";
 		}
-		if (player == Player.Player3) {
+		if (playerNum == PlayerNum.Player3) {
 			playerPrefix = "P3";
 		}
-		if (player == Player.Player4) {
+		if (playerNum == PlayerNum.Player4) {
 			playerPrefix = "P4";
 		}
 
@@ -130,7 +133,7 @@ public class CursorBehaviour : MonoBehaviour {
 		VerticalMove = playerPrefix + "VerticalMove";
 		HorizontalAim = playerPrefix + "HorizontalAim";
 		VerticalAim = playerPrefix + "VerticalAim";
-		Grab = playerPrefix + "Grab";
+		Action = playerPrefix + "Action";
 		Fire = playerPrefix + "Fire";
 	}
 }

@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21261338}
   - 50: {fileID: 5058066}
   - 61: {fileID: 6163124}
+  - 114: {fileID: 11423616}
   m_Layer: 8
   m_Name: Metal
   m_TagString: Untagged
@@ -61,6 +62,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.17, y: 1.17}
+--- !u!114 &11423616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb440c2ffb019a249b04ec09a81eb930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: 0
+  isHeld: 0
 --- !u!212 &21261338
 SpriteRenderer:
   m_ObjectHideFlags: 1
