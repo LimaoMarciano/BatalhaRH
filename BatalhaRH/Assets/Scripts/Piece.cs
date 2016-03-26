@@ -4,7 +4,7 @@ using System.Collections;
 public class Piece : MonoBehaviour {
 
 	private int id;
-	public PlayerNum owner;
+	public CursorBehaviour owner;
 	public bool isHeld = false;
 
 	// Use this for initialization

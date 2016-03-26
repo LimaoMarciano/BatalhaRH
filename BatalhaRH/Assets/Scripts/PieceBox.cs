@@ -28,7 +28,7 @@ public class PieceBox : MonoBehaviour {
 		
 	}
 
-	public void GetPiece () {
+	public void SpawnPiece () {
 		if (remainingPieces > 0) {
 
 			//Piece creation

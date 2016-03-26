@@ -92,8 +92,9 @@ public class CursorBehaviour : MonoBehaviour {
 		}
 	}
 
-	void ReleasePiece () {
+	public void ReleasePiece () {
 		Debug.Log ("Released piece " + targetPiece.name);
+		GameManager.instance.ReleasePiece (targetPiece);
 		targetPiece = null;
 		isHoldingPiece = false;
 	}
