@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PhysicsObj
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: Pieces
     uniqueID: 691064669
+    locked: 0
+  - name: Nails
+    uniqueID: 4124239009
     locked: 0
   - name: Cursor
     uniqueID: 1577992147

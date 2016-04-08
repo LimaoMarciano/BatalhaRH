@@ -20,21 +20,30 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance { get; private set; }
 	public LayerMask interactibleLayers;
+	public GameState[] gamePhases;
+	public PieceBox pieceBox;
+	public GameObject nailPrefab;
 
+	public GameState gameState;
+
+	private int currentGamePhase = 0;
 	private Dictionary<Collider2D, Piece> pieces = new Dictionary<Collider2D, Piece>();
 	private int id = 0;
-	public GameState gameState;
-	public PieceBox pieceBox;
+	private bool isBattleStarted = false;
+
 
 	// Use this for initialization
 	void Start () {
 		instance = this;
-		gameState = GameState.SelectPieces;
+		gameState = gamePhases[0];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (gameState == GameState.Battle && isBattleStarted == false) {
+			isBattleStarted = true;
+			ActivatePhysics ();
+		}
 	}
 
 	public void AddPieceToManager (GameObject pieceObj) {
@@ -91,5 +100,28 @@ public class GameManager : MonoBehaviour {
 		}
 
 		return null;
+	}
+
+	public void NextPhase () {
+		if (currentGamePhase < gamePhases.Length) {
+			currentGamePhase += 1;
+			gameState = gamePhases [currentGamePhase];
+		}
+	}
+
+	public void ActivatePhysics () {
+		//		Rigidbody2D[] rbs = vehicle.transform.GetComponentsInChildren<Rigidbody2D> ();
+		//		Debug.Log ("Activating physics. Found " + rbs.Length + " pieces");
+		//		foreach (Rigidbody2D rb in rbs) {
+		//			rb.isKinematic = false;
+		//		}
+
+		GameObject[] pieces = GameObject.FindGameObjectsWithTag ("PhysicsObj");
+		foreach (GameObject go in pieces) {
+			go.GetComponent<Rigidbody2D> ().isKinematic = false;
+		}
+
+		GameObject player = GameObject.Find ("Player");
+		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 	}
 }

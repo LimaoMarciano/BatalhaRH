@@ -20,10 +20,15 @@ public class ProtoUI : MonoBehaviour {
 	public void ActivatePhysics () {
 		GameManager.instance.gameState = GameState.Battle;
 
-		Rigidbody2D[] rbs = vehicle.transform.GetComponentsInChildren<Rigidbody2D> ();
-		Debug.Log ("Activating physics. Found " + rbs.Length + " pieces");
-		foreach (Rigidbody2D rb in rbs) {
-			rb.isKinematic = false;
+//		Rigidbody2D[] rbs = vehicle.transform.GetComponentsInChildren<Rigidbody2D> ();
+//		Debug.Log ("Activating physics. Found " + rbs.Length + " pieces");
+//		foreach (Rigidbody2D rb in rbs) {
+//			rb.isKinematic = false;
+//		}
+
+		GameObject[] pieces = GameObject.FindGameObjectsWithTag ("PhysicsObj");
+		foreach (GameObject go in pieces) {
+			go.GetComponent<Rigidbody2D> ().isKinematic = false;
 		}
 
 		GameObject player = GameObject.Find ("Player");

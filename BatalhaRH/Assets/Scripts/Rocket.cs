@@ -5,16 +5,16 @@ public class Rocket : MonoBehaviour {
 
 	public float horizontalPower = 200.0f;
 	public float verticalPower = 300.0f;
+	public Rigidbody2D rb;
 	private float hInput;
 	private float vInput;
-	private Rigidbody2D rb;
 	private GameObject vehicle;
 
 	// Use this for initialization
 	void Start () {
-		rb = GetComponent<Rigidbody2D> ();
-		vehicle = GameObject.Find ("Vehicle");
-		transform.SetParent (vehicle.transform);
+//		rb = GetComponent<Rigidbody2D> ();
+//		vehicle = GameObject.Find ("Vehicle");
+//		transform.SetParent (vehicle.transform);
 	}
 	
 	// Update is called once per frame
@@ -25,9 +25,11 @@ public class Rocket : MonoBehaviour {
 
 	void FixedUpdate () {
 //		Vector2 direction = new Vector2 (hInput, vInput);
-		if (hInput != 0 || vInput != 0) {
-			rb.AddForce (new Vector2(hInput, 0) * horizontalPower);
-			rb.AddForce (new Vector2(0, vInput) * verticalPower);
+		if (GameManager.instance.gameState == GameState.Battle) {
+			if (hInput != 0 || vInput != 0) {
+				rb.AddForce (new Vector2 (hInput, 0) * horizontalPower);
+				rb.AddForce (new Vector2 (0, vInput) * verticalPower);
+			}
 		}
 	}
 }

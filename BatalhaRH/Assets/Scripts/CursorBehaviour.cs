@@ -4,11 +4,14 @@ using System.Collections;
 public class CursorBehaviour : MonoBehaviour {
 
 	public float cursorSpeed = 1;
+	public float rotationSpeed = 6;
 
 	public LayerMask interactibleLayers;
 
 	private float hInput;
 	private float vInput;
+	private float h2Input;
+	private float v2Input;
 
 	private string HorizontalMove;
 	private string VerticalMove;
@@ -39,6 +42,8 @@ public class CursorBehaviour : MonoBehaviour {
 
 		hInput = Input.GetAxis (HorizontalMove);
 		vInput = Input.GetAxis (VerticalMove);
+		h2Input = Input.GetAxis (HorizontalAim);
+		v2Input = Input.GetAxis (VerticalAim);
 
 		if (GameManager.instance.gameState == GameState.SelectPieces) {
 
@@ -62,10 +67,22 @@ public class CursorBehaviour : MonoBehaviour {
 			}
 		}
 
+		if (GameManager.instance.gameState == GameState.BindPieces) {
+			if (Input.GetButtonDown (Action)) {
+				BindPieces ();
+			}
+		}
+
 	}
 
 	void FixedUpdate () {
 		MoveCursor ();
+
+		if (GameManager.instance.gameState == GameState.SelectPieces) {
+			RotatePiece ();
+		}
+
+
 	}
 
 	void MoveCursor () {
@@ -97,6 +114,45 @@ public class CursorBehaviour : MonoBehaviour {
 		GameManager.instance.ReleasePiece (targetPiece);
 		targetPiece = null;
 		isHoldingPiece = false;
+	}
+
+	private void RotatePiece () {
+		if (targetPiece) {
+			Vector3 rotation = new Vector3 (0, 0, h2Input);
+			targetPiece.transform.Rotate (rotation * rotationSpeed);
+		}
+	}
+
+	void BindPieces () {
+		Collider2D[] pieces;
+		HingeJoint2D[] joints;
+		GameObject nail;
+
+		pieces = Physics2D.OverlapPointAll (cursorPosition, LayerMask.GetMask ("Pieces"));
+
+
+		if (pieces.Length > 1) {
+			Debug.Log ("Binding " + pieces.Length + " pieces together.");
+
+			nail = Instantiate (GameManager.instance.nailPrefab, cursorPosition, Quaternion.identity) as GameObject;
+//			nail.transform.SetParent (vehicle.transform);
+			for (int i = 0; i < pieces.Length; i++) {
+				nail.gameObject.AddComponent<HingeJoint2D> ();
+			}
+
+			joints = nail.GetComponents<HingeJoint2D> ();
+			for (int j = 0; j < pieces.Length; j++) {
+				joints [j].connectedBody = pieces [j].attachedRigidbody;
+				joints [j].anchor = nail.transform.InverseTransformPoint (cursorPosition);
+				joints [j].connectedAnchor = pieces [j].transform.InverseTransformPoint (cursorPosition);
+				joints [j].enableCollision = false;
+				joints [j].breakForce = 500;
+			}
+
+		} else {
+			Debug.Log ("There's no pieces to bind.");
+		}
+
 	}
 
 	void SetInputStrings () {

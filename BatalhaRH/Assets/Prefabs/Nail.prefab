@@ -13,7 +13,7 @@ GameObject:
   - 50: {fileID: 5046506}
   m_Layer: 9
   m_Name: Nail
-  m_TagString: Untagged
+  m_TagString: PhysicsObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -170728287
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: da2b25c51236ea7439dcb6103095929c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,6 +109,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: -170728287
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
