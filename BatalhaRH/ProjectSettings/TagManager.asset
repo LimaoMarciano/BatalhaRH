@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PhysicsObj
+  - Chassis
   layers:
   - Default
   - TransparentFX

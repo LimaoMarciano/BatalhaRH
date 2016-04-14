@@ -18,7 +18,7 @@ public class CursorBehaviour : MonoBehaviour {
 	private string HorizontalAim;
 	private string VerticalAim;
 	private string Action;
-	private string Fire;
+	private string Hammer;
 
 
 	private Vector2 cursorPosition;
@@ -45,31 +45,31 @@ public class CursorBehaviour : MonoBehaviour {
 		h2Input = Input.GetAxis (HorizontalAim);
 		v2Input = Input.GetAxis (VerticalAim);
 
-		if (GameManager.instance.gameState == GameState.SelectPieces) {
+	
 
-			if (Input.GetButtonDown (Action)) {
+		if (Input.GetButtonDown (Action)) {
 
-				if (isHoldingPiece) {
-					ReleasePiece ();
-				} else {
-					targetCollider = GameManager.instance.ActionEvent (this, cursorPosition);
-					
-					if (targetCollider) {
-						HoldPiece (targetCollider);
-					}
+			if (isHoldingPiece) {
+				ReleasePiece ();
+			} else {
+				targetCollider = PieceManager.instance.ActionEvent (this, cursorPosition);
+				
+				if (targetCollider) {
+					HoldPiece (targetCollider);
 				}
 			}
-				
-			if (isHoldingPiece) {
+		}
+			
+		if (isHoldingPiece) {
 //			float mouseWheelInput = Input.GetAxis ("Mouse ScrollWheel");
 //			RotatePiece (mouseWheelInput);
-				MovePiece ();
-			}
+			MovePiece ();
 		}
+		
 
 		if (GameManager.instance.gameState == GameState.BindPieces) {
-			if (Input.GetButtonDown (Action)) {
-				BindPieces ();
+			if (Input.GetButtonDown (Hammer)) {
+				PieceManager.instance.BindPieces (cursorPosition);
 			}
 		}
 
@@ -78,7 +78,7 @@ public class CursorBehaviour : MonoBehaviour {
 	void FixedUpdate () {
 		MoveCursor ();
 
-		if (GameManager.instance.gameState == GameState.SelectPieces) {
+		if (GameManager.instance.gameState != GameState.Battle) {
 			RotatePiece ();
 		}
 
@@ -111,7 +111,7 @@ public class CursorBehaviour : MonoBehaviour {
 
 	public void ReleasePiece () {
 		Debug.Log ("Released piece " + targetPiece.name);
-		GameManager.instance.ReleasePiece (targetPiece);
+		PieceManager.instance.ReleasePiece (targetPiece);
 		targetPiece = null;
 		isHoldingPiece = false;
 	}
@@ -123,55 +123,8 @@ public class CursorBehaviour : MonoBehaviour {
 		}
 	}
 
-	void BindPieces () {
-		Collider2D[] pieces;
-		HingeJoint2D[] joints;
-		GameObject nail;
-
-		pieces = Physics2D.OverlapPointAll (cursorPosition, LayerMask.GetMask ("Pieces"));
-
-
-		if (pieces.Length > 1) {
-			Debug.Log ("Binding " + pieces.Length + " pieces together.");
-
-			nail = Instantiate (GameManager.instance.nailPrefab, cursorPosition, Quaternion.identity) as GameObject;
-//			nail.transform.SetParent (vehicle.transform);
-			for (int i = 0; i < pieces.Length; i++) {
-				nail.gameObject.AddComponent<HingeJoint2D> ();
-			}
-
-			joints = nail.GetComponents<HingeJoint2D> ();
-			for (int j = 0; j < pieces.Length; j++) {
-				joints [j].connectedBody = pieces [j].attachedRigidbody;
-				joints [j].anchor = nail.transform.InverseTransformPoint (cursorPosition);
-				joints [j].connectedAnchor = pieces [j].transform.InverseTransformPoint (cursorPosition);
-				joints [j].enableCollision = false;
-				joints [j].breakForce = 500;
-			}
-
-		} else {
-			Debug.Log ("There's no pieces to bind.");
-		}
-
-	}
-
 	void SetInputStrings () {
 		string playerPrefix = "";
-
-//		switch (player) {
-//		case Player.Player1:
-//			playerPrefix = "P1";
-//			break;
-//		case Player.Player2:
-//			playerPrefix = "P2";
-//			break;
-//		case Player.Player3:
-//			playerPrefix = "P3";
-//			break;
-//		case Player.Player4:
-//			playerPrefix = "P1";
-//			break;
-//		}
 
 		if (playerNum == PlayerNum.Player1) {
 			playerPrefix = "P1";
@@ -191,6 +144,7 @@ public class CursorBehaviour : MonoBehaviour {
 		HorizontalAim = playerPrefix + "HorizontalAim";
 		VerticalAim = playerPrefix + "VerticalAim";
 		Action = playerPrefix + "Action";
-		Fire = playerPrefix + "Fire";
+		Hammer = playerPrefix + "Hammer";
 	}
+		
 }

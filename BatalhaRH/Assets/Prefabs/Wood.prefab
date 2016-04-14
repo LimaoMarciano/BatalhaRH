@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11443660}
   m_Layer: 8
   m_Name: Wood
-  m_TagString: PhysicsObj
+  m_TagString: Chassis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128050}
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -73,8 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb440c2ffb019a249b04ec09a81eb930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
+  holder: {fileID: 0}
   isHeld: 0
+  isBinded: 0
 --- !u!212 &21209036
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -114,7 +115,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Mass
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LinearDrag
@@ -126,7 +127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: PhysicsObj
+      value: Chassis
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -19,93 +19,42 @@ public enum PlayerNum {
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance { get; private set; }
-	public LayerMask interactibleLayers;
 	public GameState[] gamePhases;
+	public int gamePhaseDuration = 20;
 	public PieceBox pieceBox;
-	public GameObject nailPrefab;
 
 	public GameState gameState;
 
 	private int currentGamePhase = 0;
-	private Dictionary<Collider2D, Piece> pieces = new Dictionary<Collider2D, Piece>();
-	private int id = 0;
 	private bool isBattleStarted = false;
+	private int phaseTimer;
 
 
 	// Use this for initialization
 	void Start () {
 		instance = this;
 		gameState = gamePhases[0];
+		StartCoroutine ("timer", gamePhaseDuration);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (phaseTimer == 0) {
+			NextPhase ();
+		}
+
 		if (gameState == GameState.Battle && isBattleStarted == false) {
 			isBattleStarted = true;
 			ActivatePhysics ();
 		}
 	}
 
-	public void AddPieceToManager (GameObject pieceObj) {
-		Piece piece = pieceObj.GetComponent<Piece> ();
-		Collider2D collider = pieceObj.GetComponent<Collider2D> ();
-		piece.SetId (id);
-		id += 1;
-		pieces.Add (collider, piece);
-	}
-
-	public void ReleasePiece (Collider2D collider) {
-		Piece piece = pieces [collider];
-		piece.isHeld = false;
-	}
-
-	public Collider2D ActionEvent (CursorBehaviour player, Vector3 actionPos) {
-		Collider2D collider = Physics2D.OverlapPoint (actionPos, interactibleLayers);
-
-		if (collider) {
-			//If a player interacts with the piece box
-			if (collider.gameObject.layer == LayerMask.NameToLayer ("PieceBox")) {
-				GameManager.instance.pieceBox.SpawnPiece ();
-				return null;
-			}
-
-			//If a player interacts with a piece
-			if (collider.gameObject.layer == LayerMask.NameToLayer ("Pieces")) {
-				Piece piece = pieces [collider];
-				//Check is the piece is beign held by someone
-				if (!piece.isHeld) {
-					piece.isHeld = true;
-					piece.owner = player;
-					return collider;
-				} else {
-					piece.owner.ReleasePiece ();
-					Vector3 randomPos = new Vector3 (Random.Range (-1, 1), Random.Range (-1, 1), 0);
-					if (randomPos.x >= 0) {
-						randomPos.x += 0.5f;
-					}
-					if (randomPos.x < 0) {
-						randomPos.x -= 0.5f;
-					}
-					if (randomPos.y >= 0) {
-						randomPos.y += 0.5f;
-					}
-					if (randomPos.y < 0) {
-						randomPos.y -= 0.5f;
-					}
-					Vector3 targetPos = piece.transform.position + randomPos;
-					piece.StartCoroutine ("MoveToTarget", targetPos);
-				}
-
-			}
-		}
-
-		return null;
-	}
-
 	public void NextPhase () {
 		if (currentGamePhase < gamePhases.Length) {
+			Debug.Log ("Changing game phase");
 			currentGamePhase += 1;
 			gameState = gamePhases [currentGamePhase];
+			StartCoroutine ("timer", gamePhaseDuration);
 		}
 	}
 
@@ -123,5 +72,19 @@ public class GameManager : MonoBehaviour {
 
 		GameObject player = GameObject.Find ("Player");
 		player.GetComponent<Rigidbody2D> ().isKinematic = false;
+	}
+
+	public int GetPhaseTimer () {
+		return phaseTimer;
+	}
+
+	private IEnumerator timer (int count) {
+
+		phaseTimer = count;
+
+		while (phaseTimer != 0) {
+			yield return new WaitForSeconds (1f);
+			phaseTimer -= 1;
+		}
 	}
 }

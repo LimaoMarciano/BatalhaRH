@@ -4,8 +4,9 @@ using System.Collections;
 public class Piece : MonoBehaviour {
 
 	private int id;
-	public CursorBehaviour owner;
+	public CursorBehaviour holder;
 	public bool isHeld = false;
+	public bool isBinded = false;
 
 	// Use this for initialization
 	void Start () {

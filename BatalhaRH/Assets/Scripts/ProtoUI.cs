@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class ProtoUI : MonoBehaviour {
 
+	public Text textPhaseTimer;
+
 	private GameObject vehicle;
 
 	// Use this for initialization
@@ -14,7 +16,7 @@ public class ProtoUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		textPhaseTimer.text = GameManager.instance.GetPhaseTimer().ToString();
 	}
 
 	public void ActivatePhysics () {

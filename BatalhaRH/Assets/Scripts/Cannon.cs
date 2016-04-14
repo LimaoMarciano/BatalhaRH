@@ -34,7 +34,7 @@ public class Cannon : MonoBehaviour {
 			Aim ();
 
 			if (isReady) {
-				if (Input.GetButtonDown ("P1Fire")) {
+				if (Input.GetButtonDown ("P1Hammer")) {
 					isFireBtnDown = true;
 					isReady = false;
 				}

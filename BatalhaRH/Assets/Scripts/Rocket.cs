@@ -21,6 +21,10 @@ public class Rocket : MonoBehaviour {
 	void Update () {
 		hInput = Input.GetAxis ("P1HorizontalMove");
 		vInput = Input.GetAxis ("P1VerticalMove");
+
+		if (GameManager.instance.gameState == GameState.Battle) {
+			rb.isKinematic = false;
+		}
 	}
 
 	void FixedUpdate () {

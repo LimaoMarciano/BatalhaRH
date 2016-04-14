@@ -25,7 +25,9 @@ public class PieceBox : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (GameManager.instance.gameState != GameState.SelectPieces) {
+			gameObject.SetActive (false);
+		}
 	}
 
 	public void SpawnPiece () {
@@ -37,7 +39,7 @@ public class PieceBox : MonoBehaviour {
 			piece.transform.SetParent (vehicle.transform);
 			remainingPieces -= 1;
 
-			GameManager.instance.AddPieceToManager (piece);
+			PieceManager.instance.AddPieceToManager (piece);
 
 			//Change graphic when piece box is depleted
 			if (remainingPieces == 0) {
